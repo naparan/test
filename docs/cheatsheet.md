@@ -49,7 +49,7 @@
 ## いつもの流れ
 
 ```console
-（GitHub で Issue を立てる)
+（GitHub で Issue を立てる）
 $ git switch main
 $ git pull
 $ git switch -c feature/やること
