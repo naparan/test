@@ -1,50 +1,24 @@
 # コマンド早見表
 
-## 最初に1回だけ
-
-| コマンド | 意味 |
-| --- | --- |
-| `git config --global user.name "名前"` | 名前を設定 |
-| `git config --global user.email "メール"` | メールアドレスを設定 |
-| `git config --global init.defaultBranch main` | 最初のブランチ名を `main` にする |
-| `git config --global pull.rebase false` | pull のときはマージでまとめる |
-| `gh auth login` | GitHub にログイン |
-
-## リポジトリを始める
-
 | コマンド | 意味 |
 | --- | --- |
 | `git init` | 今のフォルダをリポジトリにする |
-| `git clone URL` | GitHub のリポジトリをまるごとコピー |
-| `git remote add origin URL` | リモートを登録 |
-| `git remote -v` | 登録されているリモートを確認 |
-
-## 毎日使う
-
-| コマンド | 意味 |
-| --- | --- |
 | `git status` | 状態を確認(迷ったらこれ) |
-| `git diff` | まだ add していない変更を見る |
-| `git diff --staged` | add 済みの変更を見る |
-| `git add ファイル名` | ステージに追加 |
-| `git add .` | 今のフォルダ以下の変更をすべて追加 |
+| `git diff` | 変更内容を見る |
+| `git add ファイル名` | ステージに追加(`.` で全部) |
 | `git commit -m "メッセージ"` | コミット |
-| `git log --oneline` | 履歴を1行ずつ表示 |
-| `git log --oneline --graph --all` | ブランチの分かれ方も図で表示 |
-| `git pull` | リモートの変更を取り込む |
-| `git push` | リモートに送る |
-| `git push -u origin ブランチ名` | 新しいブランチを初めて送る |
-
-## ブランチ
-
-| コマンド | 意味 |
-| --- | --- |
+| `git log --oneline` | 履歴を見る |
+| `git remote add origin URL` | リモートを登録 |
+| `git push -u origin ブランチ名` | 新しいブランチを初めて push |
+| `git push` | push |
+| `git pull` | GitHub の変更を取り込む |
+| `git clone URL` | リポジトリをまるごとコピー |
 | `git branch` | ブランチ一覧 |
-| `git switch -c ブランチ名` | 作って切り替える |
-| `git switch ブランチ名` | 切り替える |
+| `git switch -c ブランチ名` | ブランチを作って切り替える |
+| `git switch ブランチ名` | ブランチを切り替える |
 | `git merge ブランチ名` | 今のブランチに取り込む |
 | `git merge --abort` | マージを中止 |
-| `git branch -d ブランチ名` | 削除 |
+| `git branch -d ブランチ名` | ブランチを削除 |
 
 ## いつもの流れ
 
