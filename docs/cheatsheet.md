@@ -46,21 +46,10 @@
 | `git merge --abort` | マージを中止 |
 | `git branch -d ブランチ名` | 削除 |
 
-## 取り消す
-
-| 状況 | コマンド |
-| --- | --- |
-| 編集を取り消す(add 前) | `git restore ファイル名` |
-| add を取り消す | `git restore --staged ファイル名` |
-| 直前のコミットメッセージを直す(push 前) | `git commit --amend -m "メッセージ"` |
-| 直前のコミットを取り消す(push 前) | `git reset --soft HEAD~1` |
-| push したコミットを打ち消す | `git revert コミットID` |
-| 作業を一時退避 / 戻す | `git stash` / `git stash pop` |
-| 過去の操作履歴を見る | `git reflog` |
-
 ## いつもの流れ
 
 ```console
+（GitHub で Issue を立てる)
 $ git switch main
 $ git pull
 $ git switch -c feature/やること
@@ -68,7 +57,7 @@ $ git switch -c feature/やること
 $ git add .
 $ git commit -m "何をしたか"
 $ git push -u origin feature/やること
-（GitHub で PR を作る → レビュー → マージ）
+（GitHub で PR を作る[説明に Closes #番号] → レビュー → マージ）
 $ git switch main
 $ git pull
 $ git branch -d feature/やること

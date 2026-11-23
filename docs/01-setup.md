@@ -55,11 +55,15 @@ $ git config --global user.name "Taro Yamada"
 $ git config --global user.email "taro@example.com"
 ```
 
-新しいリポジトリの最初のブランチ名を `main` にする設定もしておきます。
+あわせて、次の2つも設定しておきます。
 
 ```console
 $ git config --global init.defaultBranch main
+$ git config --global pull.rebase false
 ```
+
+- 1行目: 新しいリポジトリの最初のブランチ名を `main` にする
+- 2行目: `git pull` で手元と GitHub の両方に新しいコミットがあったとき、マージでまとめる(設定しないと、そのときにエラーで止まってしまいます)
 
 設定を確認します。
 
@@ -68,6 +72,7 @@ $ git config --global --list
 user.name=Taro Yamada
 user.email=taro@example.com
 init.defaultbranch=main
+pull.rebase=false
 ```
 
 ⚠️ **注意**: ここで設定したメールアドレスは、公開リポジトリのコミット履歴から誰でも見られます。公開したくない場合は、GitHub の [Settings → Emails](https://github.com/settings/emails) にある `xxxx+ユーザー名@users.noreply.github.com` という形式のアドレスを使いましょう。
@@ -110,7 +115,7 @@ github.com
 ## 🧪 やってみよう
 
 1. `git --version` でバージョンが表示されることを確認する
-2. `git config --global --list` で名前とメールアドレスが設定されていることを確認する
+2. `git config --global --list` で、名前・メールアドレスなど4つの設定が入っていることを確認する
 3. `gh auth status` でログインできていることを確認する(GitHub CLI を入れた人)
 
 ここまでできたら準備完了です!
